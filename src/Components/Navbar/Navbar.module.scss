@@ -1,6 +1,5 @@
 .navbar {
   display: flex;
-  flex-direction: column;
   color: white;
   margin-top: 32px;
   min-width: 320px;
@@ -8,13 +7,13 @@
 
   &__menu {
     display: flex;
-    flex-direction: column;
     gap: 32px;
+    align-items: center;
+    margin: 0 auto;
   }
 
   ul {
     display: flex;
-    flex-direction: column;
     gap: 1.5rem;
     list-style: none;
 

@@ -24,10 +24,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${jetMono.variable}`}>
-        <div style={{ display: "flex"}}>
           <Navbar />
           <ThemeProvider>{children}</ThemeProvider>
-        </div>
       </body>
     </html>
   );

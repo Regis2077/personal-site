@@ -6,9 +6,9 @@ import ThemeToggleButton from "../ThemeToggleButton"
 export default function Navbar() {
   return (
     <nav className={styles.navbar}>
-      <h1 className="logo">Regis</h1>
+      {/* <h1 className="logo">Regis</h1> */}
+      <ThemeToggleButton />
       <div className={styles.navbar__menu}>
-        <ThemeToggleButton />
         <ul>
           <li><Link href="/">Início</Link></li>
           <li><Link href="/work">Work</Link></li>

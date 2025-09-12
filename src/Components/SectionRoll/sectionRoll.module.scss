@@ -5,14 +5,29 @@
   gap: 32px;
 
   &-item {
+    &-company {
+      text-decoration: underline;
+      color: var(--text-color);
+      font-size: 24px;
+      font-weight: 600;
+      line-height: 32px;
+      letter-spacing: 0.02em;
+      text-align: left;
+      text-underline-offset: 4px;
+      text-transform: capitalize;
+      transition: color var(--transition-duration);
+    }
     &-experience {
       margin-left: 16px;
       &-title {
         margin: 22px 0;
+        color: var(--text-color);
+        transition: color var(--transition-duration);
       }
       &-title::before {
         content: "| ";
-        color: white;  
+        color: var(--text-color);
+        transition: color var(--transition-duration);
       }
     }
   
@@ -23,7 +38,9 @@
 
         margin-left: 16px;
         padding: 16px;
-        border-left: 1px solid;
+        border-left: 1px solid var(--text-color);
+        color: var(--text-color);
+        transition: color var(--transition-duration), border-color var(--transition-duration);
       }
   }
 }

@@ -1,0 +1,29 @@
+[
+  {
+    "id": 1,
+    "title": "E-commerce Platform",
+    "description": "A modern e-commerce platform built with React and Node.js, featuring user authentication, product management, and payment integration.",
+    "image": "https://picsum.photos/400/250?random=1",
+    "technologies": ["React", "Node.js", "MongoDB", "Stripe"],
+    "deployUrl": "https://example-deploy.com",
+    "githubUrl": "https://github.com/username/ecommerce-platform"
+  },
+  {
+    "id": 2,
+    "title": "Task Management App",
+    "description": "A collaborative task management application with real-time updates, drag-and-drop functionality, and team collaboration features.",
+    "image": "https://picsum.photos/400/250?random=2",
+    "technologies": ["Vue.js", "Firebase", "Vuetify", "Socket.io"],
+    "deployUrl": "https://task-app-demo.com",
+    "githubUrl": "https://github.com/username/task-management"
+  },
+  {
+    "id": 3,
+    "title": "Weather Dashboard",
+    "description": "A responsive weather dashboard that displays current weather conditions and forecasts using multiple weather APIs.",
+    "image": "https://picsum.photos/400/250?random=3",
+    "technologies": ["JavaScript", "CSS3", "HTML5", "OpenWeather API"],
+    "deployUrl": "https://weather-dashboard.netlify.app",
+    "githubUrl": "https://github.com/username/weather-dashboard"
+  }
+]

@@ -1,8 +1,11 @@
 import type { Metadata } from "next";
 import {  JetBrains_Mono } from "next/font/google";
 import "./globals.scss";
-import Navbar from "@/Components/Navbar/Navbar";
+import Navbar from "@/components/common/Navbar/Navbar";
 import { ThemeProvider } from "./context/themeProvider";
+import Image from "next/image";
+import styles from "./page.module.css";
+import Footer from "@/components/common/Footer";
 
 const jetMono = JetBrains_Mono({
   variable: "--font-jetBrain-mono",
@@ -20,12 +23,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
 
-  var esposa = "naly"
   return (
     <html lang="en">
       <body className={`${jetMono.variable}`}>
-          <Navbar />
-          <ThemeProvider>{children}</ThemeProvider>
+          <ThemeProvider>
+            <Navbar />
+            {children}
+            <Footer />
+          </ThemeProvider>
       </body>
     </html>
   );

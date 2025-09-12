@@ -1,0 +1,38 @@
+[
+  {
+    "company": "company name",
+    "companyLink": "https://www.google.com",
+    "experience": [
+      {
+        "title": "work experience",
+        "time": "12/06/2022 a 23/12/2035",
+        "describe": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos."
+      }
+    ]
+  },
+  {
+    "company": "company name",
+    "experience": [
+      {
+        "title": "work experience",
+        "time": "12/06/2022 a 23/12/2035",
+        "describe": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos."
+      },
+      {
+        "title": "work experience promote",
+        "time": "12/06/2022 a 23/12/2035",
+        "describe": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos."
+      }
+    ]
+  },
+  {
+    "company": "company name",
+    "experience": [
+      {
+        "title": "work experience",
+        "time": "12/06/2022 a 23/12/2035",
+        "describe": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos."
+      }
+    ]
+  }
+]

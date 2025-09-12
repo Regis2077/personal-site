@@ -1,4 +1,4 @@
-import SectionRoll from "@/Components/SectionRoll"
+import SectionRoll from "@/components/SectionRoll"
 
 const WorkPage = () =>{
   return(

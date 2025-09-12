@@ -1,81 +1,15 @@
+import Link from "next/link";
 import styles from "./sectionRoll.module.scss"
-
-const mockSectionRoll = [
-  {
-    company: "company name",
-    experience: [
-      {
-        title: "work experience",
-        time: "12/06/2022 a 23/12/2035",
-        describe:` Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.`
-  
-      },
-    ],
-  },
-  {
-    company: "company name",
-    experience: [
-      {
-        title: "work experience",
-        time: "12/06/2022 a 23/12/2035",
-        describe:` Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.`
-  
-      },
-      {
-        title: "work experience promote",
-        time: "12/06/2022 a 23/12/2035",
-        describe:` Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.`
-  
-      },
-    ],
-  },
-  {
-    company: "company name",
-    experience: [
-      {
-        title: "work experience",
-        time: "12/06/2022 a 23/12/2035",
-        describe:` Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.`
-  
-      },
-    ],
-  },
-]
+import experiences from "@/content/pt/works.json"
 
 const SectionRoll = () => {
   return(
     <div className={styles.sectionRoll} data-container-home>
-      {mockSectionRoll.map((item, index) => (
+      {experiences.map((item, index) => (
         <div className={styles["sectionRoll-item"]} key={index}>
-          <h2>{item.company}</h2>
+          <Link className={styles["sectionRoll-item-company"]} href={item.companyLink || ""} target="_blank">
+            {item.company}
+          </Link>
           {item.experience.map((experience, index) => (
             <div className={styles["sectionRoll-item-experience"]} key={index}>
               <h3 className={styles["sectionRoll-item-experience-title"]}>{experience.title}</h3>

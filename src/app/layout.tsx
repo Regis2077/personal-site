@@ -3,8 +3,6 @@ import {  JetBrains_Mono } from "next/font/google";
 import "./globals.scss";
 import Navbar from "@/components/common/Navbar/Navbar";
 import { ThemeProvider } from "./context/themeProvider";
-import Image from "next/image";
-import styles from "./page.module.css";
 import Footer from "@/components/common/Footer";
 
 const jetMono = JetBrains_Mono({

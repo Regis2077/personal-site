@@ -3,6 +3,7 @@ import * as React from 'react';
 import styles from './cards.module.scss';
 import projectData from '@/content/pt/projects.json';
 import { useThemeColors } from '@/app/context/themeProvider';
+import Image from 'next/image';
 
 export default function MainContent() {
   const colors = useThemeColors();
@@ -20,10 +21,12 @@ export default function MainContent() {
                 color: colors.textColor
               }}
             >
-              <img 
+              <Image 
                 src={project.image} 
                 alt={project.title}
                 className={styles.card__image}
+                width={100}
+                height={100}
               />             
               <div className={styles.card__content}>
                 <h2 

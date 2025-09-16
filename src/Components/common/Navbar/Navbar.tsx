@@ -14,10 +14,8 @@ export default function Navbar() {
       style={{
         backgroundColor: colors.backgroundColor,
         color: colors.textColor,
-        borderBottom: `1px solid ${colors.borderColor}`
       }}
     >
-      <ThemeToggleButton />
       <div className={styles.navbar__menu}>
         <ul>
           <li>
@@ -54,6 +52,7 @@ export default function Navbar() {
           </li>
         </ul>
       </div>
+      <ThemeToggleButton />
     </nav>
   )
 }

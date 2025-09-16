@@ -4,6 +4,11 @@
   min-width: 320px;
   padding: 16px;
   transition: all var(--transition-duration);
+  position: relative;
+
+  @media (max-width: 768px) {
+    margin-top: 64px;
+  }
 
   &__menu {
     display: flex;
@@ -15,6 +20,7 @@
   ul {
     display: flex;
     list-style: none;
+    gap: 16px;
 
     li a {
       text-decoration: none;
@@ -23,7 +29,7 @@
       border-radius: 4px;
       border: 1px solid transparent;
       transition: all var(--transition-duration);
-      background: #262626;
+      border: 1px solid;
 
       &:hover {
         transform: translateY(-1px);

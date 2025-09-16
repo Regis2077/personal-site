@@ -1,0 +1,46 @@
+.themeToggleButton {
+  padding: 8px;
+  border-radius: 12px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 44px;
+  min-height: 44px;
+  position: absolute;
+  position: absolute;
+  right: 110px;
+  top: -41%;
+
+  @media (max-width: 768px) {
+    top: -90%;
+    right: 17px;
+  }
+
+  &:hover {
+    transform: scale(1.1);
+
+    svg {
+      transition: all 0.3s ease;
+    }
+
+    &[data-theme="light"] svg {
+      transform: rotate(45deg);
+    }
+  }
+
+  svg {
+    transition: all 0.3s ease;
+
+    &.sunIcon {
+      fill: #fde047;
+    }
+
+    &.moonIcon {
+      fill: #374151;
+    }
+  }
+} 

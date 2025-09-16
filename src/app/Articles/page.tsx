@@ -1,9 +1,9 @@
-import BlogContent from "@/components/BlogSection/BlogContent"
+import BlogSection from "@/components/BlogSection"
 
 const articlesPage = () =>{
   return (
     <div>
-      <BlogContent />
+      <BlogSection />
     </div>
   )
 }

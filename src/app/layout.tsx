@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import {  JetBrains_Mono } from "next/font/google";
 import "./globals.scss";
-import Navbar from "@/components/common/Navbar/Navbar";
 import { ThemeProvider } from "./context/themeProvider";
+import Navbar from "@/components/common/Navbar";
 import Footer from "@/components/common/Footer";
 
 const jetMono = JetBrains_Mono({

@@ -1,4 +1,4 @@
-import BlogSection from "@/components/BlogSection"
+import BlogSection from "@/Components/BlogSection"
 
 const articlesPage = () =>{
   return (

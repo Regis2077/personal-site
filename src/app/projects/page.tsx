@@ -1,4 +1,4 @@
-import Cards from "@/components/Cards";
+import Cards from "@/Components/Cards";
 
 const ProjectsPage = () => {
   return (

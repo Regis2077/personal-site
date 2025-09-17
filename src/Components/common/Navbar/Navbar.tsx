@@ -2,7 +2,7 @@
 
 import Link from "next/link"
 import styles from "./Navbar.module.scss"
-import ThemeToggleButton from "@/Components/ThemeToggleButton"
+import ThemeToggleButton from "@/components/ThemeToggleButton"
 import { useThemeColors } from "@/app/context/themeProvider"
 
 export default function Navbar() {

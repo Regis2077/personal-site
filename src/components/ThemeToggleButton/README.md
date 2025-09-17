@@ -79,7 +79,7 @@ O arquivo `globals.scss` define variáveis CSS que são atualizadas automaticame
   --bg-color: #ffffff;
   --text-color: #000000;
   --transition-duration: 0.3s;
-}
+} 
 
 html[data-theme="dark"] {
   --bg-color: #1a1a1a;

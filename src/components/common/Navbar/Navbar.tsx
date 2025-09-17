@@ -2,8 +2,8 @@
 
 import Link from "next/link"
 import styles from "./Navbar.module.scss"
-import ThemeToggleButton from "@/components/ThemeToggleButton"
 import { useThemeColors } from "@/app/context/themeProvider"
+import ThemeToggleButton from "@/components/ThemeToggleButton";
 
 export default function Navbar() {
   const colors = useThemeColors();

@@ -3,7 +3,7 @@
 import { useTheme, useThemeColors } from "@/app/context/themeProvider";
 import styles from "./ThemeToggleButton.module.scss";
 
-export default function ThemeToggleButton() {
+const ThemeToggleButton = () => {
   const { theme, toggleTheme } = useTheme();
   const colors = useThemeColors();
 
@@ -56,3 +56,4 @@ export default function ThemeToggleButton() {
     </button>
   );
 }
+export default ThemeToggleButton;

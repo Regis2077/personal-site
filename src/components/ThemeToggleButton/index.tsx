@@ -1,6 +1,6 @@
 "use client";
 
-import { useTheme, useThemeColors } from "@/app/context/themeProvider";
+import { useTheme, useThemeColors } from "@/context/ThemeProvider";
 import styles from "./ThemeToggleButton.module.scss";
 
 const ThemeToggleButton = () => {
@@ -15,15 +15,15 @@ const ThemeToggleButton = () => {
       title={`Alternar para tema ${theme === "light" ? "escuro" : "claro"}`}
     >
       {theme === "light" ? (
-        <svg 
-          xmlns="http://www.w3.org/2000/svg" 
-          width="24" 
-          height="24" 
-          viewBox="0 0 24 24" 
-          fill="none" 
-          stroke={colors.textColor} 
-          strokeWidth="1.4" 
-          strokeLinecap="round" 
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke={colors.textColor}
+          strokeWidth="1.4"
+          strokeLinecap="round"
           strokeLinejoin="round"
           className={styles.sunIcon}
         >
@@ -38,15 +38,15 @@ const ThemeToggleButton = () => {
           <path d="m19.07 4.93-1.41 1.41"></path>
         </svg>
       ) : (
-        <svg 
-          xmlns="http://www.w3.org/2000/svg" 
-          width="24" 
-          height="24" 
-          viewBox="0 0 24 24" 
-          fill="none" 
-          stroke={colors.textColor} 
-          strokeWidth="1.4" 
-          strokeLinecap="round" 
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke={colors.textColor}
+          strokeWidth="1.4"
+          strokeLinecap="round"
           strokeLinejoin="round"
           className={styles.moonIcon}
         >

@@ -1,0 +1,44 @@
+.typewriter {
+  position: relative;
+  display: inline-block;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  color: inherit;
+  line-height: inherit;
+}
+
+.placeholder {
+  visibility: hidden;
+  display: inline-block;
+}
+
+.content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: inline-block;
+}
+
+.cursor {
+  display: inline-block;
+  margin-left: 2px;
+  opacity: 1;
+  animation: none;
+}
+
+.cursorBlink {
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+}

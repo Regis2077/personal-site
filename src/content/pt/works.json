@@ -1,37 +1,44 @@
 [
   {
-    "company": "company name",
-    "companyLink": "https://www.google.com",
+    "company": "Cadastra",
+    "companyLink": "https://www.cadastra.com",
     "experience": [
       {
-        "title": "work experience",
-        "time": "12/06/2022 a 23/12/2035",
-        "describe": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos."
-      }
-    ]
-  },
-  {
-    "company": "company name",
-    "experience": [
-      {
-        "title": "work experience",
-        "time": "12/06/2022 a 23/12/2035",
-        "describe": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos."
+        "title": "Desenvolvedor Front-End Pleno - Especialista em VTEX",
+        "time": "Mar 2023 – Presente",
+        "describe": "Assumindo essa nova posição, pude integrar e auxiliar na condução de desenvolvimento de projetos de On Going e Implementação, sendo parte atuante desde a elaboração de MVPs para possíveis clientes até o kickstarter, para tornar soluções e ideias possíveis. No meu dia a dia, sou responsável por acompanhar o ciclo completo de produtos e clientes, desde o kickstarter inicial e análise de escopo até a execução, validação final e o go live de grandes projetos. Participo ativamente da definição de estratégias e escopo das demandas, alinhando expectativas entre equipe, stakeholders e clientes. Com isso, tenho a oportunidade de analisar processos internos e propor melhorias que otimizam o fluxo de trabalho e tornam as entregas mais eficientes.\n\nNa minha equipe atual, integro uma equipe com pessoas ao redor do mundo. Como time, construímos features, discutimos soluções e compartilhamos experiências, aprendendo diariamente com o multiculturalismo que esse ambiente proporciona. Estar com esse time me fez aprender a atuar de forma colaborativa e garantir sempre clareza na comunicação entre diferentes áreas e culturas. Entre os desafios está a cobertura de grandes eventos de e-commerce no Brasil e no exterior. Experiências intensas, mas sempre cheias de aprendizado e ótimos resultados.\n\nAlém de contribuir tecnicamente, tenho papel ativo na evolução do time, orientando novos desenvolvedores, fazendo code reviews e compartilhando aprendizados do nosso dia a dia.\n\nAo longo desse período, tive a chance de me envolver em projetos de diferentes portes e complexidades e assumir demandas de front, back-end e QA, o que cada dia me da uma visão mais ampla sobre todo o ecossistema web. Tenho aprendido a cada linha de código como cada decisão técnica pode influenciar diretamente os resultados do produto e essa vivência tem me aprimorado constantemente, tornando-me cada vez mais um engenheiro melhor."
       },
       {
-        "title": "work experience promote",
-        "time": "12/06/2022 a 23/12/2035",
-        "describe": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos."
+        "title": "Desenvolvedor Front-End Júnior",
+        "time": "2022 – Mar 2023",
+        "describe": "Atuando nessa posição na Cadastra, fiz parte de times de On Going e Implementação, onde fui responsável pela criação do zero, manutenção e evolução de lojas de comércio digital e sistemas de gerenciamento de conteúdo. Essa posição me proporcionou uma ampla experiência na operação e aprimoramento de plataformas de e-commerce, permitindo que eu participasse de todo o ciclo de desenvolvimento desde a concepção de novas funcionalidades até a análise de desempenho e otimização contínua.\n\nNo meu dia a dia, estive focado em aprimorar o desempenho, o SEO e a experiência do usuário, conduzindo análises e implementando soluções que garantiam resultados consistentes e sustentáveis para os projetos.\n\nTambém atuei de forma integrada com áreas de back-end, participando de processos de integração e troca de dados entre sistemas, além de contribuir com decisões que asseguravam a estabilidade e eficiência das aplicações. Participei de reuniões estratégicas nas quais discutíamos arquitetura, definíamos prioridades e traçávamos caminhos para a evolução dos produtos e o alinhamento de expectativas com os clientes.\n\nMinha rotina seguiu metodologias ágeis, como Scrum e Kanban, o que possibilitou uma organização clara das demandas e um fluxo de trabalho colaborativo e previsível. Além disso, mantive práticas rigorosas de versionamento e controle de código com Git, GitHub e Bitbucket, garantindo rastreabilidade, padronização e integração eficiente entre os membros do squad."
       }
     ]
   },
   {
-    "company": "company name",
+    "company": "B8One",
+    "companyLink": "https://www.b8one.com",
     "experience": [
       {
-        "title": "work experience",
-        "time": "12/06/2022 a 23/12/2035",
-        "describe": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos."
+        "title": "Desenvolvedor Front-End Júnior",
+        "time": "Mai 2022 – Mai 2023",
+        "describe": "Assumindo essa posição na B8One no meu dia a dia fiz parte de um time totalmente focado em evolução e growth de clientes nos canais B2c e B2b. Fazendo parte do time analisei, desenvolvi e mantive lojas, totalmente orientadas a métricas melhorias de UX, performance e SEO. Trabalhei em ecossistemas de e-commerce utilizando VTEX CMS e VTEX IO criando lojas como um todo, landing pages, mantendo sistemas e tornando reais soluções para clientes dos mais variados setores de consumo e varejo ao redor do Brasil."
+      }
+    ]
+  },
+  {
+    "company": "TITAN ci",
+    "companyLink": "https://www.titanci.com",
+    "experience": [
+      {
+        "title": "Tech Lead",
+        "time": "Abr 2022 – 2024",
+        "describe": "Como tech lead tive a oportunidade de adentrar uma cadeira de gestão como referência técnica da equipe. Nessa posição pude tomar decisões estratégicas sobre tecnologias utilizadas nos projetos, analisar escopos, indicar melhorias em processos e conduzir o desenvolvimento de um time por inteiro. Durante esse período Participei de reuniões estratégicas com clientes e o time, onde pudemos definir objetivos e metrificar entregas, problemas e solução para variados processo de desenvolvimento.\n\nNesse período ainda tive a oportunidade de ser parte ativa na criação de um programa trainee para iniciantes em tecnologia. Junto a isso tive a valiosa experiência de ministrar capacitações, fazer cursos e mentorar membros da empresa."
+      },
+      {
+        "title": "Gerente de Projetos",
+        "time": "Abr 2022 – 2024",
+        "describe": "Como gerente de projetos tive a oportunidade de adentrar um novo nicho um pouco diferente. Monitorei, diagnostiquei e reporte o andamento de projetos, alocando tarefas e planejando ações frente a problemas. Tive a oportunidade de aplicar metodologias ágeis como Scrum e Kanban para garantir a qualidade dos projetos e processos do início ao fim."
       }
     ]
   }

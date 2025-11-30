@@ -1,7 +1,7 @@
 .footer {
   margin: 0 auto;
   max-width: 900px;
-  padding: 64px;
+  padding: 24px;
   border-top: 1px solid;
   margin-top: 32px;
 
@@ -22,7 +22,9 @@
       align-items: center;
       gap: 10px;
     }
-    a, button {
+
+    a,
+    button {
       display: flex;
       align-items: center;
       gap: 10px;
@@ -33,7 +35,7 @@
     }
   }
 
-  &__copyright{
+  &__copyright {
     display: flex;
     align-items: center;
     justify-content: center;

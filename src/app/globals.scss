@@ -11,12 +11,12 @@
 
   --font-jet-sans: 'JetBrains Mono', sans-serif;
   --max-width-content-home: 890px;
-  
+
   /* Transições suaves para mudança de tema */
   --transition-duration: 0.3s;
 }
 
-[data-container-home]{
+[data-container-home] {
   max-width: var(--max-width-content-home);
   margin: 0 auto;
 }

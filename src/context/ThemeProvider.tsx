@@ -13,7 +13,7 @@ interface ThemeContextType {
 
 const ThemeContext = createContext<ThemeContextType>({
   theme: "light",
-  toggleTheme: () => {},
+  toggleTheme: () => { },
   isDark: false,
   isLight: true,
 });
@@ -57,10 +57,9 @@ export const ThemeProvider = ({ children }: { children: ReactNode }) => {
 
 export const useTheme = () => useContext(ThemeContext);
 
-// Hook personalizado para facilitar o uso do tema
 export const useThemeColors = () => {
   const { theme } = useTheme();
-  
+
   return {
     backgroundColor: theme === "dark" ? "#1a1a1a" : "#ffffff",
     textColor: theme === "dark" ? "#ffffff" : "#000000",

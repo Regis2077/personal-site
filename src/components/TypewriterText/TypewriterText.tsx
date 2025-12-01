@@ -22,6 +22,13 @@ export default function TypewriterText({
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isComplete, setIsComplete] = useState(false);
 
+  // Reset typewriter when text changes (e.g., language change)
+  useEffect(() => {
+    setDisplayedText('');
+    setCurrentIndex(0);
+    setIsComplete(false);
+  }, [text]);
+
   useEffect(() => {
     if (delay > 0) {
       const delayTimeout = setTimeout(() => {

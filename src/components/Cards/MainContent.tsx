@@ -1,16 +1,19 @@
 'use client'
 import * as React from 'react';
-import styles from './cards.module.scss';
-import projectData from '@/content/pt/projects.json';
+
 import { useThemeColors } from '@/context/ThemeProvider';
+import { useProjectsContent } from '@/hooks/useContent';
+
+import styles from './cards.module.scss';
 
 export default function MainContent() {
   const colors = useThemeColors();
+  const projetctData = useProjectsContent().list;
 
   return (
     <div className={styles.projects}>
       <div className={styles.projects__container}>
-        {projectData.map((project, index) => (
+        {projetctData.map((project, index) => (
           <div
             key={project.id}
             className={styles.card}
@@ -41,7 +44,7 @@ export default function MainContent() {
                     </svg>
                   </a>
                   <a
-                    href={project.deployUrl}
+                    href={project.deployUrl ?? ""}
                     target="_blank"
                     rel="noopener noreferrer"
                     className={styles.card__link}

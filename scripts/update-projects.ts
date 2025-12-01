@@ -16,7 +16,8 @@ import { createGitHubService } from '../src/services/github/index';
 // Configuration
 const GITHUB_USERNAME = process.env.NEXT_PUBLIC_GITHUB_USERNAME || 'Regis2077';
 const GITHUB_TOKEN = process.env.GITHUB_TOKEN;
-const OUTPUT_PATH = join(process.cwd(), 'src/content/pt/projects.json');
+const OUTPUT_PATH_PT = join(process.cwd(), 'src/i18n/pt/projects.ts');
+const OUTPUT_PATH_EN = join(process.cwd(), 'src/i18n/en/projects.ts');
 
 // Parse command line arguments
 const args = process.argv.slice(2);
@@ -48,11 +49,48 @@ async function main() {
 
     console.log(`\n✅ Successfully fetched ${projects.length} projects\n`);
 
-    // Write to file
-    const jsonContent = JSON.stringify(projects, null, 2);
-    writeFileSync(OUTPUT_PATH, jsonContent, 'utf-8');
+    // Generate TypeScript content for PT
+    const projectsArrayPT = JSON.stringify(projects, null, 2);
+    const tsContentPT = `import { ProjectsTranslations, Project } from '../types';
 
-    console.log(`💾 Saved to: ${OUTPUT_PATH}`);
+// Project data imported from GitHub API
+const projectsList: Project[] = ${projectsArrayPT};
+
+const projectsPT: ProjectsTranslations = {
+  page: {
+    title: 'Projetos',
+    description: 'Meus projetos e experimentos de código',
+  },
+  list: projectsList,
+};
+
+export default projectsPT;
+`;
+
+    // Generate TypeScript content for EN
+    const projectsArrayEN = JSON.stringify(projects, null, 2);
+    const tsContentEN = `import { ProjectsTranslations, Project } from '../types';
+
+// Project data imported from GitHub API
+const projectsList: Project[] = ${projectsArrayEN};
+
+const projectsEN: ProjectsTranslations = {
+  page: {
+    title: 'Projects',
+    description: 'My projects and code experiments',
+  },
+  list: projectsList,
+};
+
+export default projectsEN;
+`;
+
+    // Write to files
+    writeFileSync(OUTPUT_PATH_PT, tsContentPT, 'utf-8');
+    writeFileSync(OUTPUT_PATH_EN, tsContentEN, 'utf-8');
+
+    console.log(`💾 Saved PT to: ${OUTPUT_PATH_PT}`);
+    console.log(`💾 Saved EN to: ${OUTPUT_PATH_EN}`);
     console.log('\n📋 Summary:');
     console.log(`   Total projects: ${projects.length}`);
 

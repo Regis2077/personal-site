@@ -1,11 +1,16 @@
+"use client"
+
 import Cards from "@/components/Cards";
 import PageHeader from "@/components/PageHeader";
+import { useProjectsContent } from "@/hooks/useContent";
 
 const ProjectsPage = () => {
+  const content = useProjectsContent();
+
   return (
     <>
-      <PageHeader title="Projetos">
-        Meu grande playgroud. Aqui está tudo que ando fazendo por aí pra aprender, testar ou que construo por alguma necessidade na minha vida. Fique a vontade para replicar ou contribuir com qualquer projeto!
+      <PageHeader title={content.page.title}>
+        {content.page.description}
       </PageHeader>
       <Cards />
     </>

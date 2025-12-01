@@ -1,11 +1,17 @@
+"use client"
+
 import PageHeader from "@/components/PageHeader"
 import ResumeSection from "@/components/ResumeSection"
+import { useWorkContent } from "@/hooks/useContent"
 
 const WorkPage = () => {
+
+  const content = useWorkContent();
+
   return (
     <>
-      <PageHeader title="Minha trajetória">
-        Um pouco de tudo que já fiz por aí profissionalmente. Você pode baixar meu CV no footer.
+      <PageHeader title={content.page.title}>
+        {content.page.description}
       </PageHeader>
       <ResumeSection />
     </>

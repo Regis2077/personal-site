@@ -2,19 +2,21 @@
 
 import React from 'react';
 import styles from './blog.module.scss';
-import blogPosts from '@/content/pt/articles.json';
+import { useArticlesContent } from '@/hooks/useContent';
 
 const BlogContent = () => {
   const handleCardClick = (url: string) => {
     window.open(url, '_blank', 'noopener,noreferrer');
   };
 
+  const blogPosts = useArticlesContent().articles;
+
   return (
-    <div className={styles.blogContainer}>      
+    <div className={styles.blogContainer}>
       <div className={styles.articlesContainer}>
         {blogPosts.map((post, index) => (
           <React.Fragment key={post.id}>
-            <article 
+            <article
               className={styles.articleCard}
               onClick={() => handleCardClick(post.url)}
               role="button"

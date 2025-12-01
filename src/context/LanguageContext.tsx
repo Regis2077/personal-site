@@ -1,41 +1,37 @@
 "use client"
 
-import React, { createContext, useContext, useState, ReactNode } from 'react';
-
-type Language = 'pt' | 'en';
+import React, { createContext, useContext, useState, ReactNode, useEffect } from 'react';
+import { translations, getNestedTranslation, Language } from '@/i18n';
 
 interface LanguageContextType {
   language: Language;
   setLanguage: (lang: Language) => void;
-  t: (key: string) => string;
+  t: (path: string) => string;
 }
-
-const translations = {
-  pt: {
-    home: 'Início',
-    work: 'Trabalho',
-    projects: 'Projetos',
-    articles: 'Artigos',
-    about: 'Sobre',
-    downloadCV: 'Baixar CV',
-  },
-  en: {
-    home: 'Home',
-    work: 'Work',
-    projects: 'Projects',
-    articles: 'Articles',
-    about: 'About',
-    downloadCV: 'Download CV',
-  },
-};
 
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
 export const LanguageProvider = ({ children }: { children: ReactNode }) => {
-  const [language, setLanguage] = useState<Language>('pt');
+  const [language, setLanguageState] = useState<Language>('pt');
 
-  const t = (key: string): string => {
-    return translations[language][key as keyof typeof translations.pt] || key;
+  useEffect(() => {
+    const savedLanguage = localStorage.getItem('language') as Language;
+    if (savedLanguage && (savedLanguage === 'pt' || savedLanguage === 'en')) {
+      setLanguageState(savedLanguage);
+    }
+  }, []);
+
+  const setLanguage = (lang: Language) => {
+    setLanguageState(lang);
+    localStorage.setItem('language', lang);
+  };
+
+  const t = (path: string): string => {
+    try {
+      return getNestedTranslation(translations[language], path);
+    } catch (error) {
+      return path;
+    }
   };
 
   return (

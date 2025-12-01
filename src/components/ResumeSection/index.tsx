@@ -1,9 +1,11 @@
 import Link from "next/link";
 import styles from "./sectionRoll.module.scss"
-import experiences from "@/content/pt/works.json"
 import LongText from "@/components/LongText"
+import { useWorkContent } from "@/hooks/useContent";
 
 const ResumeSection = () => {
+
+  const experiences = useWorkContent().companies;
 
   return (
     <div className={styles.sectionRoll} data-container-home>

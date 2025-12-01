@@ -12,9 +12,7 @@ const BlogSection = () => {
       color: colors.textColor,
       minHeight: "100vh"
     }}>
-      <div>
         <BlogContent />
-      </div>
     </div>
   )
 }

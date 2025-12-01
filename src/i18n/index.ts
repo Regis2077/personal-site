@@ -23,15 +23,15 @@ export const translations: Record<Language, Translations> = {
 // Helper function to get nested translation value by path
 // Example: getNestedTranslation(translations.pt, 'home.hero.typewriter')
 export function getNestedTranslation(
-  obj: any,
+  obj: Translations | Record<string, unknown>,
   path: string
 ): string {
   const keys = path.split('.');
-  let result: any = obj;
+  let result: unknown = obj;
 
   for (const key of keys) {
-    if (result && typeof result === 'object' && key in result) {
-      result = result[key];
+    if (result && typeof result === 'object' && result !== null && key in result) {
+      result = (result as Record<string, unknown>)[key];
     } else {
       // Return the path itself if not found (fallback)
       return path;

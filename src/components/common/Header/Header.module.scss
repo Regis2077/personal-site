@@ -39,6 +39,10 @@
     gap: 1rem;
   }
 
+  &__controlsDesktop {
+    @e
+  }
+
   &__icon-button {
     background: none;
     border: none;
@@ -59,10 +63,36 @@
     font-weight: 500;
   }
 
+  &__topbar {
+    display: none;
+  }
+
+  &__home-button {
+    background: none;
+    border: none;
+    color: hsl(var(--foreground));
+    cursor: pointer;
+    transition: opacity 0.2s;
+    display: flex;
+    align-items: center;
+    padding: 0;
+
+    &:hover {
+      opacity: 0.6;
+    }
+  }
+
   @media (max-width: 768px) {
-    padding: 1rem 2rem;
+    padding: 1rem 1.5rem;
     flex-direction: column;
     gap: 1.5rem;
+
+    &__topbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+    }
 
     &__nav {
       position: static;
@@ -70,6 +100,10 @@
       flex-wrap: wrap;
       justify-content: center;
       gap: 1.5rem;
+
+      button:first-child {
+        display: none; // Hide home button in mobile nav
+      }
     }
 
     &__controls {

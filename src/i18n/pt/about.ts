@@ -51,7 +51,7 @@ Aprecio muito por chegar aqui, vamos trocar uma ideia!`,
       },
       {
         title: 'No cinema',
-        description: 'E enchendo o saco da minha esposa sobre curiosidades que ele não perguntou sobre diretores e cinefilia.',
+        description: 'E enchendo o saco da minha esposa sobre curiosidades que ela não perguntou sobre diretores e cinefilia.',
       },
       {
         title: 'Em algum Museu',

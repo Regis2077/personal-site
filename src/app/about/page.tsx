@@ -14,7 +14,7 @@ const AboutPage = () => {
   const content = useAboutContent();
 
   return (
-    <div data-container-home>
+    <div data-container>
       <PageHeader title={content.page.title} />
       <LongText>
         {content.content.intro}

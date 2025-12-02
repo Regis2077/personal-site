@@ -8,12 +8,12 @@ const ProjectsPage = () => {
   const content = useProjectsContent();
 
   return (
-    <>
+    <div data-container>
       <PageHeader title={content.page.title}>
         {content.page.description}
       </PageHeader>
       <Cards />
-    </>
+    </div>
   )
 }
 

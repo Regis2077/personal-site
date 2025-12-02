@@ -8,7 +8,7 @@ const ResumeSection = () => {
   const experiences = useWorkContent().companies;
 
   return (
-    <div className={styles.sectionRoll} data-container-home>
+    <div className={styles.sectionRoll}>
       {experiences.map((item, index) => (
         <div className={styles["sectionRoll-item"]} key={index}>
           {item.experience.map((experience, experienceIndex) => (

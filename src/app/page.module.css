@@ -20,6 +20,13 @@
   max-width: 80%;
 }
 
+@media (max-width: 600px) {
+  .main h2 {
+    max-width: 100%;
+    font-size: 2.5rem;
+  }
+}
+
 .main ol {
   font-family: var(--font-geist-mono);
   padding-left: 0;
@@ -108,11 +115,6 @@ a.secondary {
 }
 
 @media (max-width: 600px) {
-  .page {
-    padding: 32px;
-    padding-bottom: 80px;
-  }
-
   .main {
     align-items: center;
   }

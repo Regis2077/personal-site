@@ -4,7 +4,7 @@ const homeEN: HomeTranslations = {
   seoTitle: 'Gabriel Regis Front-end | Back-end | Full-stack Developer | VTEX Specialist',
 
   hero: {
-    typewriter: 'Building, Learning, Expanding Ideas & Repeating.',
+    typewriter: 'Learning, Building & Repeating.',
   },
 
   intro: {

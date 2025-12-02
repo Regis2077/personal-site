@@ -4,14 +4,14 @@ const homePT: HomeTranslations = {
   seoTitle: 'Gabriel Regis Desenvolvedor Front-end | Back-end | Full-stack | VTEX especialista',
 
   hero: {
-    typewriter: 'Construindo, Aprendendo, Expandindo Ideias & Repetindo.',
+    typewriter: 'Aprendendo, Construindo & Repetindo.',
   },
 
   intro: {
     text: `Meu nome é Gabriel Regis. Você pode me encontrar profissionalmente nos links no footer e conhecer mais sobre mim na página [sobre](/about).
 
 Esse é meu digital garden, fiz pra compartilhar experiências, hobbies, projetos e o que mais eu quiser da minha vida.`,
-    imageLabel: 'eu na IHAC Lab da',
+    imageLabel: 'Eu no IHAC-Lab da',
     ufba: 'UFBA',
   },
 

@@ -1,6 +1,5 @@
 import { ProjectsTranslations, Project } from '../types';
 
-// Project data imported from GitHub API
 const projectsList: Project[] = [
   {
     id: 667158587,

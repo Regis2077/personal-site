@@ -12,7 +12,7 @@ interface PageHeaderProps {
 
 const PageHeader = ({ title, children, className }: PageHeaderProps) => {
   return (
-    <div className={`${styles.pageHeader} ${className || ''}`} data-container-home>
+    <div className={`${styles.pageHeader} ${className || ''}`}>
       <h2 className={styles.title}>{title}</h2>
       {children && (
         <LongText className={styles.description}>

@@ -16,9 +16,10 @@
   --transition-duration: 0.3s;
 }
 
-[data-container-home] {
+[data-container] {
   max-width: var(--max-width-content-home);
   margin: 0 auto;
+  padding: 0 16px;
 }
 
 html[data-theme="dark"] {

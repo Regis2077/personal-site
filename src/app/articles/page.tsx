@@ -8,7 +8,7 @@ const ArticlesPage = () => {
   const content = useArticlesContent();
 
   return (
-    <div data-container-home>
+    <div data-container>
       <PageHeader title={content.page.title}>
         {content.page.description}
       </PageHeader>

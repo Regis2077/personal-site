@@ -11,7 +11,7 @@ const Cards = () => {
       backgroundColor: colors.backgroundColor,
       color: colors.textColor,
       minHeight: "100vh"
-    }} data-container-home>
+    }}>
       <MainContent />
     </div>
   )

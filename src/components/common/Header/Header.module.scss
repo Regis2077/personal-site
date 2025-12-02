@@ -40,7 +40,13 @@
   }
 
   &__controlsDesktop {
-    @e
+    margin-left: auto;
+    display: flex;
+    gap: 1rem;
+
+    @media screen and (max-width: 768px) {
+      display: none;
+    }
   }
 
   &__icon-button {
@@ -83,7 +89,7 @@
   }
 
   @media (max-width: 768px) {
-    padding: 1rem 1.5rem;
+    padding: 2rem 1.5rem;
     flex-direction: column;
     gap: 1.5rem;
 

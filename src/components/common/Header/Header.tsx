@@ -40,9 +40,9 @@ const Header = () => {
       <nav className={styles.header__nav}>
         <button onClick={() => router.push('/')}>{t('home')}</button>
         <button onClick={() => router.push('/work')}>{t('work')}</button>
-        <button onClick={() => router.push('/projects')}>{t('projects')}</button>
-        <button onClick={() => router.push('/articles')}>{t('articles')}</button>
+        <button onClick={() => router.push('/bookmarks')}>{t('bookmarks')}</button>
         <button onClick={() => router.push('/about')}>{t('about')}</button>
+        <button onClick={() => router.push('/projects')}>{t('projects')}</button>
 
       </nav>
       <div className={styles.header__controlsDesktop}>

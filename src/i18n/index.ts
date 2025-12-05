@@ -2,7 +2,6 @@ import * as pt from './pt';
 import * as en from './en';
 import { Translations, Language } from './types';
 
-// Main translations object with type-safety
 export const translations: Record<Language, Translations> = {
   pt: {
     home: pt.home,
@@ -20,8 +19,6 @@ export const translations: Record<Language, Translations> = {
   },
 };
 
-// Helper function to get nested translation value by path
-// Example: getNestedTranslation(translations.pt, 'home.hero.typewriter')
 export function getNestedTranslation(
   obj: Translations | Record<string, unknown>,
   path: string
@@ -33,16 +30,13 @@ export function getNestedTranslation(
     if (result && typeof result === 'object' && result !== null && key in result) {
       result = (result as Record<string, unknown>)[key];
     } else {
-      // Return the path itself if not found (fallback)
       return path;
     }
   }
 
-  // If result is not a string, return the path as fallback
   return typeof result === 'string' ? result : path;
 }
 
-// Export all types for external use
 export type {
   Translations,
   Language,

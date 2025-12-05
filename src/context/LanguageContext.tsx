@@ -29,7 +29,7 @@ export const LanguageProvider = ({ children }: { children: ReactNode }) => {
   const t = (path: string): string => {
     try {
       return getNestedTranslation(translations[language], path);
-    } catch (error) {
+    } catch {
       return path;
     }
   };

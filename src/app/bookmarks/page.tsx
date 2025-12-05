@@ -10,7 +10,7 @@ const BookMarks = () => {
       <ul data-container>
         {
           bookmarksItem.map(({ nome, link, data }) => (
-            <li style={{ margin: '12px 0', lineHeight: '25px' }}>
+            <li key={link} style={{ margin: '12px 0', lineHeight: '25px' }}>
               <Link target="_blank" href={link}>{nome} - {data}</Link>
             </li>
           ))

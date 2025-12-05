@@ -1,37 +1,17 @@
 import PageHeader from "@/components/PageHeader"
 import Link from "next/link"
-
-const bookmarksItem = [
-  {
-    title: "teste Programming Across Paradigms * Anjana Vakil * GOTO 2017",
-    link: "https://t.co/zwjUoxhuhG"
-  },
-  {
-    title: "teste Programming Across Paradigms * Anjana Vakil * GOTO 2017",
-    link: "https://t.co/zwjUoxhuhG"
-  },
-  {
-    title: "teste Programming Across Paradigms * Anjana Vakil * GOTO 2017",
-    link: "https://t.co/zwjUoxhuhG"
-  },
-  {
-    title: "teste Programming Across Paradigms * Anjana Vakil * GOTO 2017",
-    link: "https://t.co/zwjUoxhuhG"
-  },
-
-]
+import bookmarksItem from "./bookmarks.json"
 
 
 const BookMarks = () => {
   return (
     <div data-container>
-      <PageHeader title="Meus BookMarks" />
-
-      <ul>
+      <PageHeader title="Lasts BookMarks" />
+      <ul data-container>
         {
-          bookmarksItem.map(({ title, link }) => (
-            <li>
-              <Link target="_blank" href={link}>{title}</Link>
+          bookmarksItem.map(({ nome, link, data }) => (
+            <li style={{ margin: '12px 0', lineHeight: '25px' }}>
+              <Link target="_blank" href={link}>{nome} - {data}</Link>
             </li>
           ))
         }

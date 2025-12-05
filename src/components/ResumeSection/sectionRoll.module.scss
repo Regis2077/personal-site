@@ -5,6 +5,10 @@
   padding: 16px;
   margin-top: 32px;
 
+  @media (max-width: 768px) {
+    padding: 0;
+  }
+
   &-item {
     display: flex;
     flex-direction: column;
@@ -59,6 +63,10 @@
         border-left: 1px solid var(--text-color);
         color: var(--text-color);
         transition: color var(--transition-duration), border-color var(--transition-duration);
+
+        @media (max-width: 768px) {
+          margin-left: 0;
+        }
       }
     }
   }

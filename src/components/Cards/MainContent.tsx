@@ -2,18 +2,85 @@
 import * as React from 'react';
 
 import { useThemeColors } from '@/context/ThemeProvider';
-import { useProjectsContent } from '@/hooks/useContent';
+import { useGitHubProjects } from '@/hooks/useGitHubProjects';
 
 import styles from './cards.module.scss';
 
 export default function MainContent() {
   const colors = useThemeColors();
-  const projetctData = useProjectsContent().list;
+  const { projects, isLoading, error, refetch } = useGitHubProjects();
 
+  // Loading state
+  if (isLoading) {
+    return (
+      <div className={styles.projects}>
+        <div className={styles.projects__container}>
+          <div
+            className={styles.loadingContainer}
+            style={{
+              color: colors.textColor,
+              textAlign: 'center',
+              padding: '3rem',
+            }}
+          >
+            <div className={styles.spinner} style={{ borderTopColor: colors.textColor }}></div>
+            <p style={{ marginTop: '1rem' }}>Carregando projetos do GitHub...</p>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
+  // Error state
+  if (error) {
+    return (
+      <div className={styles.projects}>
+        <div className={styles.projects__container}>
+          <div
+            className={styles.errorContainer}
+            style={{
+              color: colors.textColor,
+              textAlign: 'center',
+              padding: '3rem',
+            }}
+          >
+            <h3 style={{ marginBottom: '1rem' }}>❌ Erro ao carregar projetos</h3>
+            <p style={{ marginBottom: '1.5rem', opacity: 0.8 }}>{error.message}</p>
+            <button
+              onClick={refetch}
+              style={{
+                backgroundColor: colors.backgroundColor,
+                color: colors.textColor,
+                border: `2px solid ${colors.borderColor}`,
+                padding: '0.75rem 1.5rem',
+                borderRadius: '8px',
+                cursor: 'pointer',
+                fontSize: '1rem',
+                fontWeight: '500',
+                transition: 'all 0.3s ease',
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.transform = 'translateY(-2px)';
+                e.currentTarget.style.boxShadow = '0 4px 12px rgba(0,0,0,0.15)';
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.transform = 'translateY(0)';
+                e.currentTarget.style.boxShadow = 'none';
+              }}
+            >
+              🔄 Tentar novamente
+            </button>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
+  // Success state - render projects
   return (
     <div className={styles.projects}>
       <div className={styles.projects__container}>
-        {projetctData.map((project, index) => (
+        {projects.map((project, index) => (
           <div
             key={project.id}
             className={styles.card}
@@ -43,24 +110,26 @@ export default function MainContent() {
                       <path d="M9 18c-4.51 2-5-2-7-2"></path>
                     </svg>
                   </a>
-                  <a
-                    href={project.deployUrl ?? ""}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={styles.card__link}
-                    aria-label="View demo"
-                    style={{ color: colors.textColor }}
-                  >
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={styles.card__icon}>
-                      <path d="M15 3h6v6"></path>
-                      <path d="M10 14 21 3"></path>
-                      <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                    </svg>
-                  </a>
+                  {project.deployUrl && (
+                    <a
+                      href={project.deployUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={styles.card__link}
+                      aria-label="View demo"
+                      style={{ color: colors.textColor }}
+                    >
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={styles.card__icon}>
+                        <path d="M15 3h6v6"></path>
+                        <path d="M10 14 21 3"></path>
+                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                      </svg>
+                    </a>
+                  )}
                 </div>
               </div>
               <p className={styles.card__description}>
-                {project.description}
+                {project.description || 'No description available'}
               </p>
               <div className={styles.card__technologies}>
                 {project.technologies.map((tech, techIndex) => (

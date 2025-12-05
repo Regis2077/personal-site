@@ -9,7 +9,7 @@ const Footer = () => {
   return (
     <footer className={styles.footer} style={{ color: colors.textColor }}>
       <div className={styles.footer__content}>
-        <a href="mailto:gbregisdev@gmail.com" className={styles.footer__content__email}>
+        <a href="mailto:gbrregisdev@gmail.com" className={styles.footer__content__email}>
           <svg
             role="img"
             viewBox="0 0 24 24"
@@ -23,7 +23,7 @@ const Footer = () => {
           </svg>
         </a>
         <a
-          href="https://github.com/gbregisdev"
+          href="https://github.com/regis2077"
           target="_blank"
           rel="noopener noreferrer"
           style={{ color: colors.textColor }}
@@ -40,7 +40,7 @@ const Footer = () => {
           </svg>
         </a>
         <a
-          href="https://linkedin.com/in/gbregisdev"
+          href="https://www.linkedin.com/in/gabrielregisdev/"
           target="_blank"
           rel="noopener noreferrer"
           style={{ color: colors.textColor }}
@@ -56,7 +56,7 @@ const Footer = () => {
             <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.039-1.852-3.039-1.853 0-2.137 1.445-2.137 2.939v5.669H9.351V9h3.414v1.561h.049c.476-.9 1.637-1.85 3.37-1.85 3.601 0 4.263 2.37 4.263 5.455v6.286zM5.337 7.433a2.062 2.062 0 11.001-4.124 2.062 2.062 0 01-.001 4.124zM6.995 20.452H3.675V9h3.32v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.226.792 24 1.771 24h20.451C23.2 24 24 23.226 24 22.271V1.729C24 .774 23.2 0 22.222 0z" />
           </svg>
         </a>
-        <button style={{ color: colors.textColor, border: `1px solid ${colors.textColor}` }}>
+        {/* <button style={{ color: colors.textColor, border: `1px solid ${colors.textColor}` }}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -69,7 +69,7 @@ const Footer = () => {
             <path strokeLinecap="round" strokeLinejoin="round" d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3" />
           </svg>
           Download CV
-        </button>
+        </button> */}
       </div>
       <div className={styles.footer__copyright}>
         <p style={{ color: colors.textColor }}>© 2025 Regis. All rights reserved.</p>

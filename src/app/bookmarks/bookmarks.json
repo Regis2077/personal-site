@@ -1,12 +1,107 @@
 [
   {
-    "nome": "React",
-    "link": "react.dev",
-    "data": "2024-01-20"
+    "nome": "Simple Made Easy - Rich Hickey",
+    "link": "https://www.youtube.com/watch?v=SxdOUGdseq4",
+    "data": "2025-01-12"
   },
   {
-    "nome": "Vue",
-    "link": "vuejs.org",
-    "data": "2024-01-20"
+    "nome": "Modern JS Dinosaurs",
+    "link": "https://t.co/bSBZ5ypV5B",
+    "data": "2025-01-12"
+  },
+  {
+    "nome": "Ruliology of Lambdas",
+    "link": "https://writings.stephenwolfram.com/2025/09/the-ruliology-of-lambdas/",
+    "data": "2025-01-28"
+  },
+  {
+    "nome": "Learn Algorithms",
+    "link": "https://www.coursera.org/learn/algorithms-part1",
+    "data": "2025-02-15"
+  },
+  {
+    "nome": "Art of Command Line",
+    "link": "https://github.com/jlevy/the-art-of-command-line",
+    "data": "2025-02-23"
+  },
+  {
+    "nome": "CRUD Fullstack",
+    "link": "https://x.com/sseraphini/status/1926806786444579004",
+    "data": "2025-02-09"
+  },
+  {
+    "nome": "Netflix Microservices",
+    "link": "https://medium.com/swlh/a-design-analysis-of-cloud-based-microservices-architecture-at-netflix-98836b2da45f",
+    "data": "2025-03-22"
+  },
+  {
+    "nome": "Debug Node",
+    "link": "https://www.youtube.com/watch?v=bVAhNaxBEjM",
+    "data": "2025-04-05"
+  },
+  {
+    "nome": "Defensive CSS",
+    "link": "https://ishadeed.com/article/defensive-css/",
+    "data": "2025-05-18"
+  },
+  {
+    "nome": "IA Wireframes",
+    "link": "https://x.com/RealGalego/status/1995827975917305995",
+    "data": "2025-05-03"
+  },
+  {
+    "nome": "Effective Documentation",
+    "link": "https://dev.to/kibumpng/crafting-effective-documentation-4odj",
+    "data": "2025-05-27"
+  },
+  {
+    "nome": "Deepwiki",
+    "link": "https://deepwiki.com/",
+    "data": "2025-06-14"
+  },
+  {
+    "nome": "Programming Paradigms",
+    "link": "https://t.co/zwjUoxhuhG",
+    "data": "2025-07-08"
+  },
+  {
+    "nome": "12 Passos Prod",
+    "link": "https://x.com/RealGalego/status/1981722356105060813",
+    "data": "2025-07-21"
+  },
+  {
+    "nome": "Animações Trello",
+    "link": "https://trello.com/c/R6K8xvpJ/28-anima%C3%A7%C3%B5es-e-transi%C3%A7%C3%B5es-%E2%9C%A8",
+    "data": "2025-08-11"
+  },
+  {
+    "nome": "FAANG Interview",
+    "link": "https://interviewing.io/guides/hiring-process",
+    "data": "2025-08-29"
+  },
+  {
+    "nome": "Procrastinação",
+    "link": "https://www.youtube.com/watch?v=q3oEyBpoq3o",
+    "data": "2025-09-16"
+  },
+  {
+    "nome": "Used Languages",
+    "link": "https://www.tabnews.com.br/CaioLr/github-used-languages-destaque-suas-principais-linguagens-para-o-seu-readme-totalmente-customizavel",
+    "data": "2025-10-04"
+  },
+  {
+    "nome": "Google AI Studio",
+    "link": "https://aistudio.google.com/apps",
+    "data": "2025-10-25"
+  },
+  {
+    "nome": "Resume Google Job",
+    "link": "https://levelup.gitconnected.com/the-resume-that-got-a-software-engineer-a-300-000-job-at-google-8c5a1ecff40f",
+    "data": "2025-12-04"
+  },
+  {
+    "nome": "drag and drop code",
+    "link": "https://github.com/LukeberryPi/phived/blob/main/src/components/GeneralTasks.tsx",
+    "data": "2025-12-05"
   }
 ]

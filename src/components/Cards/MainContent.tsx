@@ -76,7 +76,6 @@ export default function MainContent() {
     );
   }
 
-  // Success state - render projects
   return (
     <div className={styles.projects}>
       <div className={styles.projects__container}>

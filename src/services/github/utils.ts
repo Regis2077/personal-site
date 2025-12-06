@@ -21,24 +21,11 @@ export function formatLanguages(languages: GitHubLanguages): LanguageInfo[] {
     }))
     .sort((a, b) => b.bytes - a.bytes);
 }
-
-/**
- * Extracts top N language names from languages object
- * @param languages - Object with language names as keys and bytes as values
- * @param limit - Maximum number of languages to return
- * @returns Array of language names sorted by usage
- */
 export function getTopLanguages(languages: GitHubLanguages, limit = 5): string[] {
   const formatted = formatLanguages(languages);
   return formatted.slice(0, limit).map(lang => lang.name);
 }
 
-/**
- * Maps GitHub repository data to project format
- * @param repo - GitHub repository object
- * @param languages - Languages used in the repository
- * @returns Project object in the format used by the application
- */
 export function mapToProjectFormat(
   repo: GitHubRepository,
   languages: GitHubLanguages
@@ -61,12 +48,6 @@ export function mapToProjectFormat(
   };
 }
 
-/**
- * Filters repositories based on criteria
- * @param repos - Array of GitHub repositories
- * @param options - Filter options
- * @returns Filtered array of repositories
- */
 export function filterRepositories(
   repos: GitHubRepository[],
   options: {
@@ -84,18 +65,14 @@ export function filterRepositories(
   } = options;
 
   return repos.filter(repo => {
-    // Filter forks
     if (excludeForks && repo.fork) return false;
 
-    // Filter by stars
     if (repo.stargazers_count < minStars) return false;
 
-    // Filter by excluded topics
     if (excludeTopics.length > 0 && repo.topics.some(topic => excludeTopics.includes(topic))) {
       return false;
     }
 
-    // Filter by included topics (if specified, repo must have at least one)
     if (includeTopics.length > 0 && !repo.topics.some(topic => includeTopics.includes(topic))) {
       return false;
     }
@@ -104,12 +81,6 @@ export function filterRepositories(
   });
 }
 
-/**
- * Sorts repositories by various criteria
- * @param repos - Array of repositories
- * @param sortBy - Sort criteria
- * @returns Sorted array of repositories
- */
 export function sortRepositories(
   repos: GitHubRepository[],
   sortBy: 'stars' | 'updated' | 'created' | 'name' = 'updated'

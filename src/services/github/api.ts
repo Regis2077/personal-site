@@ -161,10 +161,8 @@ export class GitHubService {
 
     console.log(`📦 Processing ${repos.length} repositories...`);
 
-    // Fetch languages for each repository
-    const projects: ProjectWithTechnologies[] = [];
-
-    for (const repo of repos) {
+    // Fetch languages for all repositories in parallel
+    const projectsPromises = repos.map(async (repo) => {
       try {
         const languages = await this.fetchRepositoryLanguages(
           this.config.username,
@@ -174,14 +172,19 @@ export class GitHubService {
         // Only include repos that have languages
         if (Object.keys(languages).length > 0) {
           const project = mapToProjectFormat(repo, languages);
-          projects.push(project);
           console.log(`✅ ${repo.name}: ${Object.keys(languages).join(', ')}`);
+          return project;
         }
+        return null;
       } catch (error) {
         console.error(`❌ Failed to fetch languages for ${repo.name}:`, error);
-        // Continue with other repos even if one fails
+        return null;
       }
-    }
+    });
+
+    // Wait for all promises and filter out nulls
+    const results = await Promise.all(projectsPromises);
+    const projects = results.filter((p): p is ProjectWithTechnologies => p !== null);
 
     return projects;
   }

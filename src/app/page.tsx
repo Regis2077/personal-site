@@ -13,39 +13,47 @@ export default function Home() {
   return (
     <div className={styles.page} data-container>
       <main className={styles.main} data-container-home>
-        <h1 style={{ display: 'none' }}>{content.seoTitle}</h1>
+        <h1 className={styles.visuallyHidden}>{content.seoTitle}</h1>
+
         <TypewriterText
           text={content.hero.typewriter}
           speed={100}
           as="h2"
         />
-        <LongText>
-          {content.intro.text}
-        </LongText>
 
-        <div className={styles.imageContainer}>
-          <Image
-            src={homeImage.src}
-            alt="Foto de perfil de Gabriel Regis"
-            className={styles.image}
-            width={800}
-            height={500}
-          />
-          <span className={styles.imageLabel}>
-            {content.intro.imageLabel}{" "}
-            <a
-              href="https://www.ufba.br/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className={styles.ufbaLink}
-            >
-              {content.intro.ufba}
-            </a>
-          </span>
-        </div>
-        <LongText>
-          {content.summary.text}
-        </LongText>
+        <section aria-label="Introdução">
+          <LongText>
+            {content.intro.text}
+          </LongText>
+
+          <figure className={styles.imageContainer}>
+            <Image
+              src={homeImage.src}
+              alt="Foto de perfil de Gabriel Regis"
+              className={styles.image}
+              width={800}
+              height={500}
+              priority
+            />
+            <figcaption className={styles.imageLabel}>
+              {content.intro.imageLabel}{" "}
+              <a
+                href="https://www.ufba.br/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className={styles.ufbaLink}
+              >
+                {content.intro.ufba}
+              </a>
+            </figcaption>
+          </figure>
+        </section>
+
+        <section aria-label="Resumo">
+          <LongText>
+            {content.summary.text}
+          </LongText>
+        </section>
       </main>
     </div>
   );

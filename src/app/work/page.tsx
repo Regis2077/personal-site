@@ -5,7 +5,6 @@ import ResumeSection from "@/components/ResumeSection"
 import { useWorkContent } from "@/hooks/useContent"
 
 const WorkPage = () => {
-
   const content = useWorkContent();
 
   return (
@@ -13,7 +12,9 @@ const WorkPage = () => {
       <PageHeader title={content.page.title}>
         {content.page.description}
       </PageHeader>
-      <ResumeSection />
+      <article>
+        <ResumeSection />
+      </article>
     </div>
   )
 }

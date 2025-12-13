@@ -12,7 +12,9 @@ const ProjectsPage = () => {
       <PageHeader title={content.page.title}>
         {content.page.description}
       </PageHeader>
-      <Cards />
+      <article>
+        <Cards />
+      </article>
     </div>
   )
 }

@@ -13,6 +13,7 @@
     display: flex;
     gap: 3rem;
 
+    a,
     button {
       background: none;
       border: none;
@@ -22,6 +23,7 @@
       transition: opacity 0.2s;
       font-weight: 400;
       font-family: var(--font-jet-sans);
+      text-decoration: none;
 
       &:first-child {
         font-weight: 700;
@@ -107,8 +109,9 @@
       justify-content: center;
       gap: 1.5rem;
 
+      a:first-child,
       button:first-child {
-        display: none; // Hide home button in mobile nav
+        display: none; // Hide home link in mobile nav
       }
     }
 

@@ -123,5 +123,10 @@
     "nome": "color generator",
     "link": "https://kigen.design/color",
     "data": "2025-12-09"
+  },
+  {
+    "nome": "Claude Code: Best practices for agentic coding",
+    "link": "https://www.anthropic.com/engineering/claude-code-best-practices",
+    "data": "2025-12-13"
   }
 ]

@@ -6,17 +6,10 @@
   font-weight: inherit;
   color: inherit;
   line-height: inherit;
-}
-
-.placeholder {
-  visibility: hidden;
-  display: inline-block;
+  min-height: 1em;
 }
 
 .content {
-  position: absolute;
-  top: 0;
-  left: 0;
   display: inline-block;
 }
 

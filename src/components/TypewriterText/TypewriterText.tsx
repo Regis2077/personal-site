@@ -53,7 +53,6 @@ export default function TypewriterText({
 
   return (
     <Component className={`${styles.typewriter} ${className}`}>
-      <span className={styles.placeholder} aria-hidden="true">{text}</span>
       <span className={styles.content}>
         {displayedText}
         <span className={`${styles.cursor} ${isComplete ? styles.cursorBlink : ''}`}>|</span>

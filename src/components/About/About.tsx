@@ -8,7 +8,6 @@ import { Hobby } from '@/i18n/types';
 import styles from './About.module.scss';
 import LongText from '../LongText';
 
-// Icon mapping based on hobby title keywords
 const getIconForHobby = (title: string) => {
   const lowerTitle = title.toLowerCase();
 

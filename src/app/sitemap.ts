@@ -18,12 +18,23 @@ export default function sitemap(): MetadataRoute.Sitemap {
       const url = lang === 'pt'
         ? `${SITE_URL}/${page}`
         : `${SITE_URL}/en/${page}`;
+      
+      // Verifica se é a página Home
+      const isHomePage = page === '';
 
       routes.push({
         url: url.replace(/\/$/, ''), // Remove trailing slash
         lastModified: new Date(),
-        changeFrequency: page === '' ? 'weekly' : 'monthly',
-        priority: page === '' ? 1.0 : 0.8,
+        changeFrequency: isHomePage ? 'weekly' : 'monthly',
+        priority: isHomePage ? 1.0 : 0.8,
+        
+        // --- ATUALIZADO AQUI ---
+        // Agora apontando para a og-image.png
+        ...(isHomePage && {
+          images: [`${SITE_URL}/og-image.png`],
+        }),
+        // -----------------------
+
         alternates: {
           languages: {
             pt: `${SITE_URL}/${page}`,

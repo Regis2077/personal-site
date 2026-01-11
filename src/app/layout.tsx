@@ -13,15 +13,15 @@ const jetMono = JetBrains_Mono({
   display: "swap",
 });
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://gabrielregis.com';
+const SITE_URL = 'https://gabrielregis.com';
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "Gabriel Regis | Digital Garden",
+    default: "Gabriel Regis",
     template: "%s | Gabriel Regis",
   },
-  description: "Desenvolvedor frontend e fullstack especializado em React, Next.js e TypeScript. Confira meu portfólio e projetos.",
+  description: "Desenvolvedor frontend e fullstack especializado em React, Next.js e TypeScript",
   keywords: ["desenvolvedor frontend", "desenvolvedor fullstack", "React", "Next.js", "TypeScript", "JavaScript", "portfolio", "Gabriel Regis"],
   authors: [{ name: "Gabriel Regis", url: SITE_URL }],
   creator: "Gabriel Regis",
@@ -36,15 +36,15 @@ export const metadata: Metadata = {
     locale: "pt_BR",
     alternateLocale: ["en_US"],
     url: SITE_URL,
-    siteName: "Gabriel Regis | Digital Garden",
-    title: "Gabriel Regis | Digital Garden",
+    siteName: "Gabriel Regis",
+    title: "Gabriel Regis",
     description: "Desenvolvedor frontend e fullstack especializado em React, Next.js e TypeScript.",
     images: [
       {
         url: `${SITE_URL}/og-image.png`,
         width: 1200,
         height: 630,
-        alt: "Gabriel Regis - Desenvolvedor Frontend & Fullstack",
+        alt: "Gabriel Regis",
       },
     ],
   },

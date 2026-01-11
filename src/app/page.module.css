@@ -166,7 +166,7 @@ a.secondary {
 .imageContainer img,
 .imageContainer .image {
   width: 100%;
-  height: auto;
+  height: 523px;
   object-fit: cover;
 }
 

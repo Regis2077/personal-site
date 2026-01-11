@@ -3,7 +3,7 @@
 import styles from "./page.module.css";
 import LongText from "@/components/LongText";
 import TypewriterText from "@/components/TypewriterText";
-import homeImage from "@/assets/images/gabrielregis.jpg";
+import homeImage from "../../public/gabrielregis.jpg";
 import Image from "next/image";
 import { useHomeContent } from "@/hooks/useContent";
 
@@ -29,7 +29,7 @@ export default function Home() {
           <figure className={styles.imageContainer}>
             <Image
               src={homeImage.src}
-              alt="Gabriel Regis"
+              alt="Gabriel Regis - desenvolvedor frontend e fullstack"
               className={styles.image}
               width={800}
               height={500}
